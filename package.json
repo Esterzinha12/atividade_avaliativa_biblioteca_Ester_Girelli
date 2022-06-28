@@ -1,0 +1,24 @@
+{
+  "name": "atividade_avaliativa_biblioteca_ester_girelli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esterzinha12/atividade_avaliativa_biblioteca_Ester_Girelli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Esterzinha12/atividade_avaliativa_biblioteca_Ester_Girelli/issues"
+  },
+  "homepage": "https://github.com/Esterzinha12/atividade_avaliativa_biblioteca_Ester_Girelli#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "firebase": "^9.8.4",
+    "nodemon": "^2.0.18"
+  }
+}
