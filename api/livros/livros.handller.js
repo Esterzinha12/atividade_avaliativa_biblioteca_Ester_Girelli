@@ -1,7 +1,10 @@
-function buscarLivros(){
+const crud = require("../../crud");
 
-}
+async function buscarLivros() {
+    return await crud.buscar("livros");
+};
 
-module.exports={
+
+module.exports= {
     buscarLivros
 }

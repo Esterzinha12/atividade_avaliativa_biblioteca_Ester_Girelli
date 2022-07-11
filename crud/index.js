@@ -1,5 +1,6 @@
-import { initializeApp } from "firebase/app";
-const { getFirestore,
+const { initializeApp } = "firebase/app";
+const { 
+    getFirestore,
     collection,
     doc,
     setDoc,
@@ -21,12 +22,14 @@ const firebaseConfig = {
     messagingSenderId: "945544664302",
     appId: "1:945544664302:web:e547f47679e1f142e04fff",
     measurementId: "G-8F7VQRL4XB"
-  };
+};
 
-  const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const app = initializeApp(firebaseConfig);
 
-async function salvar(nomeTabela, id, dado) {
+const db = getFirestore();
+// const analytics = getAnalytics(app);
+
+async function cadastrar(nomeTabela, id, dado) {
     if (id) {
         const referenciaEntity = await setDoc(doc(db, nomeTabela, id), dado);
         const salvarData = {
@@ -75,7 +78,7 @@ async function buscarId(nomeTabela, id) {
 
 }
 
-async function remover(nomeTabela, id){
+async function remover(nomeTabela, id) {
     const dado = await deleteDoc(doc(db, nomeTabela, id));
     return {
         message: `${id} deletado`
@@ -83,8 +86,8 @@ async function remover(nomeTabela, id){
 }
 
 module.exports = {
-    salvar,
     buscar,
+    cadastrar,
     buscarId,
     remover
 }
