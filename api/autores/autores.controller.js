@@ -3,7 +3,8 @@ const router = express.Router();
 const handllerAutores = require("./autores.handller")
 
 router.post("/", async (req, res) => {
-    res.json(await handllerAutores.cadastrarAutores());
+    const autor= req.body;
+    res.json(await handllerAutores.cadastrarAutores(autor));
 });
 
 router.get("/", async (req, res) => {
