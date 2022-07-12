@@ -1,4 +1,4 @@
-const { initializeApp } = "firebase/app";
+const { initializeApp } = require("firebase/app");
 const { 
     getFirestore,
     collection,
