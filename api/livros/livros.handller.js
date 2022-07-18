@@ -1,19 +1,19 @@
 const crud = require("../../crud");
 
-async function cadastrarLivros() {
-    return await crud.cadastrar("livros");
+async function cadastrarLivros(livro) {
+    return await crud.cadastrar("livros", undefined, livro);
 };
 
 async function buscarLivros() {
     return await crud.buscar("livros");
 };
 
-async function buscarLivrosId() {
-    return await crud.buscarId("livros");
+async function buscarLivrosId(id) {
+    return await crud.buscarId("livros", id);
 };
 
-async function deletarEditoras() {
-    return await crud.remover("editoras");
+async function deletarLivros(id) {
+    return await crud.remover("livros", id);
 };
 
 
@@ -21,5 +21,5 @@ module.exports= {
     buscarLivros,
     buscarLivrosId,
     cadastrarLivros,
-    deletarEditoras
+    deletarLivros
 }

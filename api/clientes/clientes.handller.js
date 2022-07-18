@@ -1,19 +1,19 @@
 const crud = require("../../crud");
 
-async function cadastrarClientes() {
-    return await crud.cadastrar("clientes");
+async function cadastrarClientes(cliente) {
+    return await crud.cadastrar("clientes", undefined, cliente);
 };
 
 async function buscarClientes() {
     return await crud.buscar("clientes");
 };
 
-async function buscarClientesId() {
-    return await crud.buscarId("clientes");
+async function buscarClientesId(id) {
+    return await crud.buscarId("clientes", id);
 };
 
-async function deletarClientes() {
-    return await crud.remover("clientes");
+async function deletarClientes(id) {
+    return await crud.remover("clientes", id);
 };
 
 

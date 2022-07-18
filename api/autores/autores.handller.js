@@ -8,12 +8,12 @@ async function buscarAutores() {
     return await crud.buscar("autores");
 };
 
-async function buscarAutoresId() {
-    return await crud.buscarId("autores");
+async function buscarAutoresId(id) {
+    return await crud.buscarId("autores", id);
 };
 
-async function deletarAutores() {
-    return await crud.remover("autores");
+async function deletarAutores(id) {
+    return await crud.remover("autores", id);
 };
 
 

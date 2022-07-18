@@ -1,19 +1,19 @@
 const crud = require("../../crud");
 
-async function cadastrarEditoras() {
-    return await crud.cadastrar("editoras");
+async function cadastrarEditoras(editora) {
+    return await crud.cadastrar("editoras",undefined, editora);
 };
 
 async function buscarEditoras() {
     return await crud.buscar("editoras");
 };
 
-async function buscarEditorasId() {
-    return await crud.buscarId("editoras");
+async function buscarEditorasId(id) {
+    return await crud.buscarId("editoras", id);
 };
 
-async function deletarEditoras() {
-    return await crud.remover("editoras");
+async function deletarEditoras(id) {
+    return await crud.remover("editoras", id);
 };
 
 
