@@ -85,6 +85,9 @@ async function remover(nomeTabela, id) {
     }
 }
 
+
+
+
 module.exports = {
     buscar,
     cadastrar,

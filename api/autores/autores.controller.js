@@ -18,7 +18,7 @@ router.get("/:id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
     const id =req.params.id;
-    res.json(await handllerClientes.deletarAutores(id));
+    res.json(await handllerAutores.deletarAutores(id));
 });
 
 module.exports = router;
